@@ -1,7 +1,7 @@
 import streamlit as st
 from google import genai
 
- # Initialize the official Gemini Client using the provided API key.
+# Initialize the official Gemini Client using the provided API key.
 gemini_api_key = st.secrets["gemini_api_key"]
 gmn_client = genai.Client(api_key=gemini_api_key)
 
@@ -23,9 +23,9 @@ if "messages" not in st.session_state:
 st.title('Gemini Chat Test')
 
  # Loop through all messages stored in the session state and display them
- for message in st.session_state.messages:
-  with st.chat_message(message["role"]):
-   st.markdown(message["content"])
+for message in st.session_state.messages:
+ with st.chat_message(message["role"]):
+  st.markdown(message["content"])
 
 # st.chat_input displays the chat box at the bottom of the screen.
 if prompt := st.chat_input("Message to Gemini..."):
