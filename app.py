@@ -2,7 +2,7 @@ import streamlit as st
 from google import genai
 
  # Initialize the official Gemini Client using the provided API key.
-gemini_api_key = st.secrets["gemini_api_key"]
+gemini_api_key = st.secrets["AIzaSyCjf4NlHJuUfYgBB4U4OSWNhOY2g1IuQDE"]
 gmn_client = genai.Client(api_key=gemini_api_key)
 
 def generate_gemini_answer(prompt):
